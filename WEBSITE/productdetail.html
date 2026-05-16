@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Twe Clothing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><h1>Twe <span>Clothing</span></h1></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html">Categories</a>
+                <a href="product.html" class="active">Products</a>
+                <a href="About.html">About</a>
+                <a href="Contect.html">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container product-detail">
+        <div class="product-images">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Essential Cotton Tee">
+        </div>
+        <div class="product-info-detail">
+            <h1>Essential Cotton Tee</h1>
+            <p class="price">$45.00</p>
+            <p class="product-description">
+                Crafted from 100% premium organic cotton, our Essential Tee offers an unparalleled combination of softness, durability, and breathability. Designed with a modern, tailored fit, it's the perfect foundation for any wardrobe.
+            </p>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="display:block; margin-bottom:5px; font-size:13px; text-transform:uppercase; color:var(--text-light);">Size</label>
+                <select style="width: 100%; padding: 15px; border: 1px solid var(--border-color); font-family: var(--font-main);">
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>X-Large</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <label style="display:block; margin-bottom:5px; font-size:13px; text-transform:uppercase; color:var(--text-light);">Quantity</label>
+                <input type="number" value="1" min="1" style="width: 100px; padding: 15px; border: 1px solid var(--border-color); font-family: var(--font-main);">
+            </div>
+
+            <button class="btn" style="width: 100%;" onclick="window.location='Cart.html'">Add to Cart</button>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Twe Clothing</h3>
+                    <p style="color:#aaa; font-size:14px;">Redefining premium casual wear. Elevate your everyday style with our curated collections.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="category.html">Men</a></li>
+                        <li><a href="category.html">Women</a></li>
+                        <li><a href="product.html">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="Contect.html">Contact Us</a></li>
+                        <li><a href="order-history.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Ragister.html">Register</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Twe Clothing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
