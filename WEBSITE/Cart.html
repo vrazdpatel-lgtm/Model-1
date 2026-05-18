@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | PATEL CLUB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body onload="loadCart()">
+
+    
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><h1>PATEL <span>CLUB</span></h1></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html">Categories</a>
+                <a href="product.html">Products</a>
+                <a href="About.html">About</a>
+                <a href="Contect.html">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container" style="min-height: 60vh;">
+        <div class="section-title">
+            <h2>Your Cart</h2>
+        </div>
+        <div class="cart-container">
+            <div class="cart-items">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-body">
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="cart-summary">
+                <h3 style="margin-bottom: 20px; text-transform: uppercase; font-size: 16px;">Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="cart-shipping">₹0.00</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span id="cart-total">₹0.00</span>
+                </div>
+                <button class="btn" style="width: 100%; margin-top: 20px;" onclick="window.location='Payment.html'">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    
+    </footer>
+    <script src="js/script.js"></script>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PATEL CLUB</h3>
+                    <p style="color:#aaa; font-size:14px;">Redefining premium casual wear. Elevate your everyday style with our curated collections.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="category.html">Men</a></li>
+                        <li><a href="category.html">Women</a></li>
+                        <li><a href="product.html">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="Contect.html">Contact Us</a></li>
+                        <li><a href="order-history.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Ragister.html">Register</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PATEL CLUB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

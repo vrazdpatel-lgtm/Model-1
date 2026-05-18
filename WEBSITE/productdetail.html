@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | PATEL CLUB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body onload="loadProductDetail()">
+
+    
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><h1>PATEL <span>CLUB</span></h1></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html">Categories</a>
+                <a href="product.html" class="active">Products</a>
+                <a href="About.html">About</a>
+                <a href="Contect.html">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container product-detail">
+        <div class="product-images">
+            <img id="product-image" src="" alt="Product image">
+        </div>
+        <div class="product-info-detail">
+            <h1 id="product-title">Product Title</h1>
+            <p class="price" id="product-price">₹0.00</p>
+            <p class="product-description" id="product-description">Product description goes here.</p>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="display:block; margin-bottom:5px; font-size:13px; text-transform:uppercase; color:var(--text-light);">Size</label>
+                <select id="product-size" style="width: 100%; padding: 15px; border: 1px solid var(--border-color); font-family: var(--font-main);">
+                </select>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <label style="display:block; margin-bottom:5px; font-size:13px; text-transform:uppercase; color:var(--text-light);">Quantity</label>
+                <div class="qty-control" style="display:flex; align-items:center; gap:10px;">
+                    <button type="button" class="qty-btn" onclick="changeProductQty(-1)" aria-label="Decrease quantity">-</button>
+                    <input id="product-qty" type="number" value="1" min="1" style="width: 100px; padding: 15px; border: 1px solid var(--border-color); font-family: var(--font-main); text-align:center;">
+                    <button type="button" class="qty-btn" onclick="changeProductQty(1)" aria-label="Increase quantity">+</button>
+                </div>
+            </div>
+
+            <button class="btn" style="width: 100%;" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+
+    
+    </footer>
+    <script src="js/script.js"></script>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PATEL CLUB</h3>
+                    <p style="color:#aaa; font-size:14px;">Redefining premium casual wear. Elevate your everyday style with our curated collections.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="category.html">Men</a></li>
+                        <li><a href="category.html">Women</a></li>
+                        <li><a href="product.html">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="Contect.html">Contact Us</a></li>
+                        <li><a href="order-history.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Ragister.html">Register</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PATEL CLUB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

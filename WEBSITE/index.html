@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATEL CLUB | Premium Fashion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-I6YVN+QkEX7Cw/t0lMQOXMYNsBHRlsBg7v7+gW4pN2ZT4gjz5XWk1DyZhFVnRbvz" crossorigin="anonymous">
+</head>
+<body>
+
+    
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><h1>PATEL <span>CLUB</span></h1></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="category.html">Categories</a>
+                <a href="product.html">Products</a>
+                <a href="About.html">About</a>
+                <a href="Contect.html">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h2>The New Standard of Elegance</h2>
+                    <p>Discover our latest collection of premium, minimalist apparel designed for the modern wardrobe.</p>
+                    <a href="product.html" class="btn">Explore Collection</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Fashion style showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-title">
+            <h2>Featured Arrivals</h2>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" onclick="window.location='productdetail.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="T-Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Essential Cotton Tee</h3>
+                    <p class="product-price">₹45.00</p>
+                    <button type="button" class="btn add-cart-small" onclick="event.stopPropagation(); addProductToCart(0)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" onclick="window.location='productdetail.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jeans">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Denim Jeans</h3>
+                    <p class="product-price">₹120.00</p>
+                    <button type="button" class="btn add-cart-small" onclick="event.stopPropagation(); addProductToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" onclick="window.location='productdetail.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jacket">
+                </div>
+                <div class="product-info">
+                    <h3>Minimalist Jacket</h3>
+                    <p class="product-price">₹180.00</p>
+                    <button type="button" class="btn add-cart-small" onclick="event.stopPropagation(); addProductToCart(2)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" onclick="window.location='productdetail.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1588099768531-a72d4a198538?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sweater">
+                </div>
+                <div class="product-info">
+                    <h3>Merino Wool Sweater</h3>
+                    <p class="product-price">₹95.00</p>
+                    <button type="button" class="btn add-cart-small" onclick="event.stopPropagation(); addProductToCart(3)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="section-title">
+            <h2>FAQs</h2>
+        </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                        What is your return policy?
+                    </button>
+                </h2>
+                <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We offer easy returns within 14 days of delivery. Items must be unworn and in original condition with tags attached.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                        Do you ship internationally?
+                    </button>
+                </h2>
+                <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we ship to many countries worldwide. Shipping rates and delivery times vary by destination.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                        How can I track my order?
+                    </button>
+                </h2>
+                <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        After placing an order, you will receive a tracking link by email. You can also check order status in your account page.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PATEL CLUB</h3>
+                    <p style="color:#aaa; font-size:14px;">Redefining premium casual wear. Elevate your everyday style with our curated collections.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="category.html">Men</a></li>
+                        <li><a href="category.html">Women</a></li>
+                        <li><a href="product.html">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="Contect.html">Contact Us</a></li>
+                        <li><a href="order-history.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Ragister.html">Register</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PATEL CLUB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-4EDyqbAjaNLb8NsG3z6VKFov45QpA0wv2pSewXYkf+ndgvWNqI+gV3UYNQCgpgG4" crossorigin="anonymous"></script>
+</body>
+</html>
