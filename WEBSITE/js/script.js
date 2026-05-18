@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 console.log("Fashion Hub Website Loaded");
 
 function welcomeMessage(){
@@ -217,4 +218,10 @@ function updateCartTotals(){
     if(elSub) elSub.innerText = `₹${subtotal.toFixed(2)}`;
     if(elShip) elShip.innerText = `₹${shipping.toFixed(2)}`;
     if(elTotal) elTotal.innerText = `₹${total.toFixed(2)}`;
+=======
+console.log("Fashion Hub Website Loaded");
+
+function welcomeMessage(){
+    alert("Welcome To Fashion Hub");
+>>>>>>> 7a3574c138e1de3881011af3a0f87c516a5c1fc0
 }

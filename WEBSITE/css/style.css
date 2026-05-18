@@ -63,6 +63,7 @@ header {
     height: 80px;
 }
 
+<<<<<<< HEAD
 .logo a {
     display: inline-flex;
     align-items: center;
@@ -76,13 +77,18 @@ header {
     display: block;
 }
 
+=======
+>>>>>>> 7a3574c138e1de3881011af3a0f87c516a5c1fc0
 .logo h1 {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--primary-color);
+<<<<<<< HEAD
     margin: 0;
+=======
+>>>>>>> 7a3574c138e1de3881011af3a0f87c516a5c1fc0
 }
 
 .logo span {
@@ -203,6 +209,7 @@ header {
     transition: var(--transition);
 }
 
+<<<<<<< HEAD
 .add-cart-small {
     width: 100%;
     margin-top: 14px;
@@ -214,6 +221,8 @@ header {
     display: none !important;
 }
 
+=======
+>>>>>>> 7a3574c138e1de3881011af3a0f87c516a5c1fc0
 .btn:hover {
     background-color: var(--accent-color);
     transform: translateY(-2px);
@@ -486,6 +495,7 @@ header {
     margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
 .qty-control {
     display: flex;
     align-items: center;
@@ -513,6 +523,8 @@ header {
     max-width: 100px;
     text-align: center;
 }
+=======
+>>>>>>> 7a3574c138e1de3881011af3a0f87c516a5c1fc0
 
 .profile-container {
     display: grid;
