@@ -41,36 +41,22 @@
         <div class="profile-content">
             <h2>Order History</h2>
             
-            <div class="order-card">
-                <div class="order-header">
-                    <span>Order #TWE-98237</span>
-                    <span>Placed on: May 15, 2026</span>
+            <div class="order-actions">
+                <div class="action-inputs">
+                    <input id="order-filter-input" type="text" placeholder="Search by order, product, status...">
+                    <select id="order-status-filter">
+                        <option value="all">All statuses</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="pending">Pending</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
                 </div>
-                <div style="display: flex; gap: 20px; align-items: center;">
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Tee" style="width: 60px; height: 80px; object-fit: cover;">
-                    <div>
-                        <p style="font-weight: 500;">Essential Cotton Tee</p>
-                        <p style="color: var(--text-light); font-size: 13px;">Qty: 1 | Total: ₹45.00</p>
-                        <span style="display: inline-block; padding: 4px 8px; background-color: #e6f4ea; color: #137333; font-size: 12px; margin-top: 10px; border-radius: 2px;">Delivered</span>
-                    </div>
-                </div>
+                <div id="order-summary" class="order-summary">Showing 0 orders.</div>
             </div>
 
-            <div class="order-card">
-                <div class="order-header">
-                    <span>Order #TWE-98102</span>
-                    <span>Placed on: April 20, 2026</span>
-                </div>
-                <div style="display: flex; gap: 20px; align-items: center;">
-                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jeans" style="width: 60px; height: 80px; object-fit: cover;">
-                    <div>
-                        <p style="font-weight: 500;">Classic Denim Jeans</p>
-                        <p style="color: var(--text-light); font-size: 13px;">Qty: 1 | Total: ₹120.00</p>
-                        <span style="display: inline-block; padding: 4px 8px; background-color: #e6f4ea; color: #137333; font-size: 12px; margin-top: 10px; border-radius: 2px;">Delivered</span>
-                    </div>
-                </div>
+            <div id="orders-list" class="orders-list">
+                <p class="empty-message">Loading orders...</p>
             </div>
-            
         </div>
     </section>
 
@@ -105,12 +91,16 @@
                         <li><a href="profile.html">My Profile</a></li>
                     </ul>
                 </div>
+                <div class=\"footer-col\">
+                    
+                </div>
             </div>
-            <div class="footer-bottom">
+            <div class=\"footer-bottom\">
                 <p>&copy; 2026 PATEL CLUB. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
