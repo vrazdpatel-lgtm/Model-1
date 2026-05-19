@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         });
     }
+    if(typeof initOrderHistoryPage === 'function') {
+        initOrderHistoryPage();
+    }
 });
 
 function welcomeMessage(){
@@ -359,4 +362,108 @@ function onScanSuccess(decodedText){
     if(resultContainer) resultContainer.style.display = 'block';
     if(upiField) upiField.value = decodedText;
     stopQrScanner();
+}
+
+const orderHistory = [
+    {
+        id: 'TWE-98237',
+        date: 'May 15, 2026',
+        item: 'Essential Cotton Tee',
+        qty: 1,
+        total: 45.00,
+        status: 'Delivered',
+        statusKey: 'delivered',
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+    },
+    {
+        id: 'TWE-98102',
+        date: 'April 20, 2026',
+        item: 'Classic Denim Jeans',
+        qty: 1,
+        total: 120.00,
+        status: 'Delivered',
+        statusKey: 'delivered',
+        image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+    },
+    {
+        id: 'TWE-98055',
+        date: 'March 12, 2026',
+        item: 'Urban Hoodie',
+        qty: 2,
+        total: 170.00,
+        status: 'Pending',
+        statusKey: 'pending',
+        image: 'https://images.unsplash.com/photo-1520975917154-22d5a8c2eae1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+    },
+    {
+        id: 'TWE-97941',
+        date: 'February 02, 2026',
+        item: 'Leather Waist Bag',
+        qty: 1,
+        total: 60.00,
+        status: 'Cancelled',
+        statusKey: 'cancelled',
+        image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
+    }
+];
+
+function initOrderHistoryPage(){
+    const filterInput = document.getElementById('order-filter-input');
+    const statusFilter = document.getElementById('order-status-filter');
+
+    if(filterInput) {
+        filterInput.addEventListener('input', function(){
+            renderOrderHistory(filterInput.value.trim(), statusFilter ? statusFilter.value : 'all');
+        });
+    }
+
+    if(statusFilter) {
+        statusFilter.addEventListener('change', function(){
+            renderOrderHistory(filterInput ? filterInput.value.trim() : '', statusFilter.value);
+        });
+    }
+
+    renderOrderHistory('', 'all');
+}
+
+function renderOrderHistory(searchText, statusFilter){
+    const ordersList = document.getElementById('orders-list');
+    const summary = document.getElementById('order-summary');
+    if(!ordersList || !summary) return;
+
+    const normalizedSearch = (searchText || '').toLowerCase();
+    const filteredOrders = orderHistory.filter(order => {
+        const matchesStatus = statusFilter === 'all' || order.statusKey === statusFilter;
+        const matchesSearch = !normalizedSearch ||
+            order.id.toLowerCase().includes(normalizedSearch) ||
+            order.item.toLowerCase().includes(normalizedSearch) ||
+            order.status.toLowerCase().includes(normalizedSearch);
+        return matchesStatus && matchesSearch;
+    });
+
+    ordersList.innerHTML = filteredOrders.length ? filteredOrders.map(order => {
+        return `
+            <div class="order-card">
+                <div class="order-header">
+                    <span>${order.id}</span>
+                    <span>${order.date}</span>
+                </div>
+                <div class="order-body">
+                    <img src="${order.image}" alt="${order.item}">
+                    <div class="order-detail">
+                        <p class="order-item-title">${order.item}</p>
+                        <div class="order-meta">
+                            <span>${order.qty} item${order.qty > 1 ? 's' : ''}</span>
+                            <span>Total ₹${order.total.toFixed(2)}</span>
+                            <span class="status-pill ${order.statusKey}">${order.status}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('') : '<p class="empty-message">No matching orders found.</p>';
+
+    const totalAmount = filteredOrders.reduce((sum, order) => sum + order.total, 0);
+    const statusLabel = statusFilter === 'all' ? '' : ` (${statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1)})`;
+    summary.innerText = `Showing ${filteredOrders.length} order${filteredOrders.length === 1 ? '' : 's'}${statusLabel} · Total ₹${totalAmount.toFixed(2)}`;
 }

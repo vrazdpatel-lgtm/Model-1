@@ -628,6 +628,113 @@ header {
     font-size: 14px;
 }
 
+.order-actions {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.action-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.order-actions input,
+.order-actions select {
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    min-width: 220px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.order-summary {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-card {
+    border: 1px solid var(--border-color);
+    padding: 18px;
+    margin-bottom: 0;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.order-card .order-body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.order-card .order-body img {
+    width: 68px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+
+.order-detail {
+    flex: 1 1 0;
+    min-width: 220px;
+}
+
+.order-item-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.order-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.status-pill {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.status-pill.delivered {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+
+.status-pill.pending {
+    background-color: #fff4e5;
+    color: #b35d00;
+    border: 1px solid #f5d5aa;
+}
+
+.status-pill.cancelled {
+    background-color: #fde8e9;
+    color: #991b1b;
+    border: 1px solid #f3c0c5;
+}
+
+.empty-message {
+    color: var(--text-light);
+}
 
 footer {
     background-color: var(--primary-color);
@@ -661,6 +768,30 @@ footer {
 
 .footer-col ul li a:hover {
     color: var(--bg-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.08);
+    color: #aaaaaa;
+    transition: var(--transition);
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    background-color: rgba(255,255,255,0.18);
 }
 
 .footer-bottom {
