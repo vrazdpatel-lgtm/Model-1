@@ -1,0 +1,234 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  margin: 40px 0;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Cart Box */
+.cart-box {
+  width: 350px;
+  margin: 30px auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.cart-box h2 {
+  color: #111827;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* Product Grid */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Product Card */
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #16a34a;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  background: #ef4444;
+  color: white;
+
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #60a5fa
+  );
+
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+  .heading h1{
+    font-size:2rem;
+  }
+
+  .product-container{
+    grid-template-columns:1fr;
+  }
+
+  .cart-box{
+    width:90%;
+  }
+  
+}
+.page-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  color: white;
+}
+
+.page-container h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.page-container p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* About Cards */
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.info-card h3 {
+  margin-bottom: 15px;
+}
+
+/* Contact */
+.contact-box {
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #1d4ed8;
+}
